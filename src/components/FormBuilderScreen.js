@@ -7,7 +7,7 @@ const FormBuilderScreen = (props) => {
   const [qText, setQText] = useState('');
 
   const submitQuestion = () => {
-    if (prompt('Are you sure?')) {
+    if (window.confirm('Are you sure?')) {
       props.submitQuestion(qType, qText);
     };
   };
@@ -18,11 +18,9 @@ const FormBuilderScreen = (props) => {
       <select 
         className='new-question-type-selector'
         onChange={(e) => setQType(e.target.value)}
+        defaultValue='text'
       >
-        <option 
-          value='text' 
-          selected
-        >
+        <option value='text'>
           Text
         </option>
         <option value='number'>Numerical</option>

@@ -13,14 +13,14 @@ function App() {
 
   const addQuestion = (qType, qText) => {
 
-    for (const q of questions) {
-      if (q.type === qType) {
-        if (q.text === qText) {
-          submitQuestionError();
-          return;
-        };
-      };
-    };
+    // for (const q of questions) {
+    //   if (q.type === qType) {
+    //     if (q.text === qText) {
+    //       submitQuestionError();
+    //       return;
+    //     };
+    //   };
+    // };
 
     let newQuestionObject = {
       text: qText,
@@ -30,7 +30,9 @@ function App() {
     let qCatcher = [...questions];
     qCatcher.push(newQuestionObject);
     setQuestions(qCatcher);
-  }
+    console.log(qCatcher);
+  };
+
   return (
     <div className="App">
       <h2 className="form-header">Build a Form Here</h2>
@@ -38,9 +40,9 @@ function App() {
         submitQuestion={(type, text) => addQuestion(type, text)}
       />
       <ul className='questions-list'>
-        {questions.map(item => (
+        {questions.map(q => (
           <li className='single-question'>
-            <SingleQuestionThumbnail question={item} />
+            <SingleQuestionThumbnail question={q} />
           </li>
         ))}
       </ul>

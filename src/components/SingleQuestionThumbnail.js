@@ -1,10 +1,12 @@
 import React from 'react'
 
 const SingleQuestionThumbnail = (props) => {
+
+  console.log('new question: ' + JSON.stringify(props.question));
   return (
     <div className='s-q-thumbnail'>
-      <h5>{props.question.qType}</h5>
-      <p>{props.question.qText}</p>
+      <h5 className='s-q-type'>{props.question.type}</h5>
+      <p className='s-q-text'>{props.question.text}</p>
     </div>
   )
 }
