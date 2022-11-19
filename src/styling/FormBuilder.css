@@ -1,0 +1,16 @@
+.form-builder-screen {
+  position: fixed;
+  left: 30vw;
+  width: 40vw;
+  top: 30vh;
+  height: 40vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px darkgray;
+}
+
+.form-builder-header {
+  text-align: center;
+  color: darkblue;
+  text-shadow: 1px 1px 1px 1px black;
+}
