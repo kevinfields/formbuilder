@@ -3,3 +3,12 @@
   text-shadow: 1px 1px darkblue;
   color: blue;
 }
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 5vw;
+  top: 10vh;
+  border: 1px solid black;
+}

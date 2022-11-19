@@ -7,10 +7,30 @@
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px darkgray;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-content: center;
+  justify-content: space-around;
 }
 
 .form-builder-header {
   text-align: center;
   color: darkblue;
   text-shadow: 1px 1px 1px 1px black;
+}
+
+.new-question-type-selector {
+  height: 5vh;
+  width: 30vw;
+  border: 2px solid darkblue;
+  text-align: center;
+}
+
+.new-question-text {
+  width: 30vw;
+  border: 2px solid blue;
+  border-radius: 5px;
+  line-height: 3vh;
+  height: 9vh;
 }
