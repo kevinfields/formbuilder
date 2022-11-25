@@ -31,13 +31,16 @@ const QuestionSlot = (props) => {
         </select>
       : responseBox === 'checklist' ?
         props.question.options.list.map((opt, key) => (
+          <>
+          <div className='checklist-label'>{opt}</div>
           <input 
             type='checkbox' 
             value={opt}
             key={key}
           >
-            {opt}
+            
           </input>
+          </>
         ))
       : null
       }
