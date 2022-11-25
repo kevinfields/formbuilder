@@ -7,9 +7,7 @@ const FormBuilderScreen = (props) => {
   const [qText, setQText] = useState('');
 
   const submitQuestion = () => {
-    if (window.confirm('Are you sure?')) {
-      props.submitQuestion(qType, qText);
-    };
+    props.submitQuestion(qType, qText);
   };
 
   return (

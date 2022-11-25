@@ -30,8 +30,14 @@ function App() {
     let qCatcher = [...questions];
     qCatcher.push(newQuestionObject);
     setQuestions(qCatcher);
-    console.log(qCatcher);
   };
+
+  const removeQuestion = (q) => {
+
+    let catcher = [...questions];
+    catcher = catcher.filter(item => item.text !== q.text || item.type !== q.type);
+    setQuestions(catcher);
+  }
 
   return (
     <div className="App">
@@ -42,7 +48,10 @@ function App() {
       <ul className='questions-list'>
         {questions.map(q => (
           <li className='single-question'>
-            <SingleQuestionThumbnail question={q} />
+            <SingleQuestionThumbnail 
+              question={q}
+              removeQuestion={() => removeQuestion(q)}
+            />
           </li>
         ))}
       </ul>
