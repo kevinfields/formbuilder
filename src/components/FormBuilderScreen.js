@@ -34,12 +34,12 @@ const FormBuilderScreen = (props) => {
     if (optionText.length === 0) {
       return;
     };
-    let newCount = options.count;
+
     let newList = options.list;
     newList.push(optionText);
     setOptions({
       list: newList,
-      count: newCount,
+      count: newList.length,
     });
     setOptionText('');
   };
