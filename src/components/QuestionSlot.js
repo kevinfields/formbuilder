@@ -14,7 +14,7 @@ const QuestionSlot = (props) => {
         >
 
         </input>
-      : responseBox === 'numerical' ?
+      : responseBox === 'number' ?
         <input
           type='number'
           className='response-box-number'
@@ -25,9 +25,12 @@ const QuestionSlot = (props) => {
         <select
           className='response-box-radio'
         >
-          {props.question.options.list.map((opt, key) => {
-            <option value={opt} key={key}>{opt}</option>
-          })}
+          {props.question.options.list.map((opt, key) => (
+            <>
+              <div className='radio-label'>{opt}</div>
+              <option value={opt} key={key}>{opt}</option>
+            </>
+          ))}
         </select>
       : responseBox === 'checklist' ?
         props.question.options.list.map((opt, key) => (
