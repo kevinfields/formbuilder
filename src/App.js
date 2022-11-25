@@ -11,7 +11,7 @@ function App() {
     alert('That question has already been added.');
   }
 
-  const addQuestion = (qType, qText) => {
+  const addQuestion = (qType, qText, options) => {
 
     // for (const q of questions) {
     //   if (q.type === qType) {
@@ -26,6 +26,10 @@ function App() {
       text: qText,
       type: qType,
     };
+
+    if (options) {
+      newQuestionObject = {...newQuestionObject, options: options};
+    }
 
     let qCatcher = [...questions];
     qCatcher.push(newQuestionObject);
@@ -43,7 +47,7 @@ function App() {
     <div className="App">
       <h2 className="form-header">Build a Form Here</h2>
       <FormBuilderScreen 
-        submitQuestion={(type, text) => addQuestion(type, text)}
+        submitQuestion={(type, text, options) => addQuestion(type, text, options)}
       />
       <ul className='questions-list'>
         {questions.map(q => (

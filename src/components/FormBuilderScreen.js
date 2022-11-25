@@ -5,10 +5,54 @@ const FormBuilderScreen = (props) => {
 
   const [qType, setQType] = useState('text');
   const [qText, setQText] = useState('');
+  const [addOptions, setAddOptions] = useState(false);
+  const [optionText, setOptionText] = useState('');
+  const [options, setOptions] = useState({
+    count: 0,
+    list: [],
+  });
 
   const submitQuestion = () => {
-    props.submitQuestion(qType, qText);
+
+    if (qType === 'radio' || qType === 'checklist') {
+      props.submitQuestion(qType, qText, options);
+    } else {
+      props.submitQuestion(qType, qText);
+    };
+
+    setQType('text');
+    setQText('');
+    setAddOptions(false);
+    setOptions({count: 0, list: []});
   };
+
+  const addNewOption = () => {
+
+    console.log('optionText: ' + optionText);
+    console.log('currentOptions: ' + options.list);
+
+    if (optionText.length === 0) {
+      return;
+    };
+    let newCount = options.count;
+    let newList = options.list;
+    newList.push(optionText);
+    setOptions({
+      list: newList,
+      count: newCount,
+    });
+    setOptionText('');
+  };
+
+  useEffect(() => {
+
+    if (qType === 'radio' || qType === 'checklist') {
+      setAddOptions(true);
+    } else {
+      setAddOptions(false);
+    };
+
+  }, [qType]);
 
   return (
     <div className='form-builder-screen'>
@@ -32,6 +76,31 @@ const FormBuilderScreen = (props) => {
         placeholder='Question Text'
       >
       </textarea>
+      {addOptions ?
+        <div className='add-options-bar'>
+          {options.list.map((item, key) => (
+            <div 
+              className='single-option'
+              key={key}
+            >
+              {item}
+            </div>
+          ))}
+          <input 
+            className='new-option-input'
+            type='text'
+            value={optionText}
+            onChange={(e) => setOptionText(e.target.value)}
+          >
+          </input>
+          <button 
+            onClick={() => addNewOption()}
+            className='add-option-button'
+          >
+            Add New Option
+          </button> 
+        </div>
+      : null}
       <button
         className='submit-question-button'
         onClick={() => submitQuestion()}
