@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
 import FormBuilderScreen from "./components/FormBuilderScreen";
 import SingleQuestionThumbnail from "./components/SingleQuestionThumbnail";
+import MyFormPage from './pages/MyFormPage';
 import "./styling/Form.css";
 
 function App() {
 
   const [questions, setQuestions] = useState([]);
+  const [creating, setCreating] = useState(true);
 
   const submitQuestionError = () => {
     alert('That question has already been added.');
@@ -45,20 +47,27 @@ function App() {
 
   return (
     <div className="App">
-      <h2 className="form-header">Build a Form Here</h2>
-      <FormBuilderScreen 
-        submitQuestion={(type, text, options) => addQuestion(type, text, options)}
-      />
-      <ul className='questions-list'>
-        {questions.map(q => (
-          <li className='single-question'>
-            <SingleQuestionThumbnail 
-              question={q}
-              removeQuestion={() => removeQuestion(q)}
-            />
-          </li>
-        ))}
-      </ul>
+      { creating ?
+        <>
+          <h2 className="form-header">Build a Form Here</h2>
+          <FormBuilderScreen 
+            submitQuestion={(type, text, options) => addQuestion(type, text, options)}
+          />
+          <ul className='questions-list'>
+            {questions.map(q => (
+              <li className='single-question'>
+                <SingleQuestionThumbnail 
+                  question={q}
+                  removeQuestion={() => removeQuestion(q)}
+                />
+              </li>
+            ))}
+          </ul>
+        </>
+      :
+        <MyFormPage form={questions} />
+      }
+      <button onClick={() => setCreating(!creating)}>Change Mode</button>
     </div>
   );
 }
