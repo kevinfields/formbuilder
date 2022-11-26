@@ -3,7 +3,7 @@
   left: 30vw;
   width: 40vw;
   top: 30vh;
-  height: 40vh;
+  height: 45vh;
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px darkgray;
@@ -33,4 +33,29 @@
   border-radius: 5px;
   line-height: 3vh;
   height: 9vh;
+}
+
+.new-question-type-selector {
+  align-self: center;
+}
+
+.new-question-text {
+  align-self: center;
+}
+
+.submit-question-button {
+  width: 25%;
+  align-self: center;
+  height: 5vh;
+  color: blue;
+  border: 1px solid darkblue;
+  box-shadow: 1px 1px 1px 1px indigo;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-bottom: 5vh;
+}
+
+.submit-question-button:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
