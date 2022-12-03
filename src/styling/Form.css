@@ -9,40 +9,22 @@
   flex-direction: column;
   gap: 4.5vh;
   position: fixed;
-  right: 5vw;
+  right: 3pc;
   top: 10vh;
-  width: 20vw;
+  width: 20pc;
   height: 70vh;
   border: 1px solid black;
-  overflow-y: scroll;
-}
-
-.s-q-thumbnail {
-  width: 15vw;
-  height: 20vh;
-  padding: 2vh;
-  border: 1px solid red;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0vh;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
-.s-q-type {
-  font-weight: bold;
-  font-size: 16pt;
-  margin-bottom: 3vh;
-}
-
-.s-q-text {
-  padding: 1vh;
-  margin: 0px;
-  text-overflow: ellipsis;
-}
 
 .single-question {
   height: 20vh;
   width: 19vw;
 }
+
+
+
+
+

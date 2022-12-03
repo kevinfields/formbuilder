@@ -1,0 +1,29 @@
+.question-slot {
+
+}
+
+.question-title {
+
+}
+
+
+.checklist-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 5pc;
+  max-width: 40pc;
+}
+
+.checklist-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.response-box-radio {
+  display: flex;
+  flex-direction: row;
+  gap: 5pc;
+  max-width: 40pc;
+}

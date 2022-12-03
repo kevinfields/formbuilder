@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styling/QuestionSlot.css';
 
 const QuestionSlot = (props) => {
 
@@ -33,18 +34,20 @@ const QuestionSlot = (props) => {
           ))}
         </select>
       : responseBox === 'checklist' ?
-        props.question.options.list.map((opt, key) => (
-          <>
-          <div className='checklist-label'>{opt}</div>
-          <input 
-            type='checkbox' 
-            value={opt}
-            key={key}
-          >
+      <div className='checklist-flex'>
+        {props.question.options.list.map((opt, key) => (
+          <div className='checklist-label'> 
+          <div>{opt}</div>
+            <input 
+              type='checkbox' 
+              value={opt}
+              key={key}
+            >
+            </input>
             
-          </input>
-          </>
-        ))
+          </div>
+        ))}
+        </div>
       : null
       }
     </div>

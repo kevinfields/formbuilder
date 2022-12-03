@@ -1,9 +1,9 @@
-import React from 'react'
-import QuestionSlot from './QuestionSlot'
+import React from 'react';
+import QuestionSlot from './QuestionSlot';
 
 const FullForm = (props) => {
   return (
-    <div className='full-form'>
+    <div>
       {props.form.map((q, key) => (
         <QuestionSlot 
           question={q} 

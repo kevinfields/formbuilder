@@ -1,10 +1,11 @@
 import React from 'react'
 import FullForm from '../components/FullForm'
+import '../styling/MyFormPage.css';
 
 const MyFormPage = (props) => {
   return (
     <div className='full-form'>
-      <h2>My Form</h2>
+      <div className='form-header-literal'>My Form</div>
       <FullForm form={props.form} />
     </div>
   )

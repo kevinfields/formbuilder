@@ -1,0 +1,16 @@
+.full-form {
+  width: 70pc;
+  height: 35pc;
+  border: 1px solid black;
+  position: fixed;
+  left: 15vw;
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  gap: 2vh;
+}
+
+.form-header-literal {
+  font-size: 20pt;
+}
