@@ -66,11 +66,14 @@
   flex-direction: column;
   gap: 2vh;
   max-height: 20vh;
+  height: 20vh;
   overflow-y: scroll;
   justify-content: center;
 }
 
 .single-option {
   width: 15vw;
+  height: 4.5vh;
+  border: 1px solid black;
   align-self: center;
 }

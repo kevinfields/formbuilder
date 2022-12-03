@@ -7,27 +7,42 @@
 .questions-list {
   display: flex;
   flex-direction: column;
+  gap: 4.5vh;
   position: fixed;
   right: 5vw;
   top: 10vh;
+  width: 20vw;
+  height: 70vh;
   border: 1px solid black;
+  overflow-y: scroll;
 }
 
 .s-q-thumbnail {
   width: 15vw;
-  height: 10vh;
+  height: 20vh;
+  padding: 2vh;
   border: 1px solid red;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   gap: 0vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .s-q-type {
-  margin: 0;
+  font-weight: bold;
+  font-size: 16pt;
+  margin-bottom: 3vh;
 }
 
 .s-q-text {
-  margin: 0;
+  padding: 1vh;
+  margin: 0px;
+  text-overflow: ellipsis;
+}
+
+.single-question {
+  height: 20vh;
+  width: 19vw;
 }

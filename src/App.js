@@ -69,16 +69,16 @@ function App() {
           <FormBuilderScreen 
             submitQuestion={(type, text, options) => addQuestion(type, text, options)}
           />
-          <ul className='questions-list'>
+          <div className='questions-list'>
             {questions.map(q => (
-              <li className='single-question'>
+              <div className='single-question'>
                 <SingleQuestionThumbnail 
                   question={q}
                   removeQuestion={() => removeQuestion(q)}
                 />
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </>
       :
         <MyFormPage form={questions} />
