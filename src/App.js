@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import FormBuilderScreen from "./components/FormBuilderScreen";
 import SingleQuestionThumbnail from "./components/SingleQuestionThumbnail";
 import MyFormPage from './pages/MyFormPage';
@@ -43,7 +43,23 @@ function App() {
     let catcher = [...questions];
     catcher = catcher.filter(item => item.text !== q.text || item.type !== q.type);
     setQuestions(catcher);
-  }
+  };
+
+  useEffect(() => {
+    if (questions.length === 0) {
+      let placeholderQuestion = {
+        text: 'Questions will appear here.',
+        type: 'text',
+      };
+      setQuestions([placeholderQuestion]);
+    } else {
+      if (questions[0].text === 'Questions will appear here.' && questions.length > 1) {
+        let qCatcher = [...questions];
+        qCatcher.shift();
+        setQuestions(qCatcher);
+      }
+    }
+  }, [questions])
 
   return (
     <div className="App">

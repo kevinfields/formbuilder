@@ -1,5 +1,4 @@
 import React from 'react'
-import { Form } from 'react-router-dom'
 import QuestionSlot from './QuestionSlot'
 
 const FullForm = (props) => {

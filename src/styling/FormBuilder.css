@@ -69,3 +69,8 @@
   overflow-y: scroll;
   justify-content: center;
 }
+
+.single-option {
+  width: 15vw;
+  align-self: center;
+}
