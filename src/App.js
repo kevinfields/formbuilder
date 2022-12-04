@@ -49,7 +49,7 @@ function App() {
     if (questions.length === 0) {
       let placeholderQuestion = {
         text: 'Questions will appear here.',
-        type: 'text',
+        type: 'none',
       };
       setQuestions([placeholderQuestion]);
     } else {
@@ -59,7 +59,7 @@ function App() {
         setQuestions(qCatcher);
       }
     }
-  }, [questions])
+  }, [questions]);
 
   return (
     <div className="App">
@@ -83,7 +83,12 @@ function App() {
       :
         <MyFormPage form={questions} />
       }
-      <button onClick={() => setCreating(!creating)}>Change Mode</button>
+      <button 
+        onClick={() => setCreating(!creating)}
+        className='change-mode-button'
+      >
+        {creating ? 'View Form' : 'Edit Form'}
+      </button>
     </div>
   );
 }

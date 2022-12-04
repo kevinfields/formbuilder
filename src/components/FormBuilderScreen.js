@@ -14,6 +14,11 @@ const FormBuilderScreen = (props) => {
 
   const submitQuestion = () => {
 
+
+    if (qText.length < 2) {
+      return;
+    }
+
     if (qType === 'radio' || qType === 'checklist') {
       props.submitQuestion(qType, qText, options);
     } else {
@@ -27,9 +32,6 @@ const FormBuilderScreen = (props) => {
   };
 
   const addNewOption = () => {
-
-    console.log('optionText: ' + optionText);
-    console.log('currentOptions: ' + options.list);
 
     if (optionText.length === 0) {
       return;

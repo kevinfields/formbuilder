@@ -13,7 +13,7 @@ const SingleQuestionThumbnail = (props) => {
         >
           Remove
         </button>
-        <div className='s-q-type'>{props.question.type}</div>
+        <div className='s-q-type'>{props.question.type !== 'none' ? props.question.type : ''}</div>
       </div>
       <div className='s-q-text'>{props.question.text}</div>
     </div>
