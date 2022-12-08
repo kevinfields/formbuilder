@@ -5,6 +5,8 @@ const FormBuilderScreen = (props) => {
 
   const [qType, setQType] = useState('text');
   const [qText, setQText] = useState('');
+  const [editingName, setEditingName] = useState(false);
+  const [formTitle, setFormTitle] = useState('My Form')
   const [addOptions, setAddOptions] = useState(false);
   const [optionText, setOptionText] = useState('');
   const [options, setOptions] = useState({
@@ -58,7 +60,32 @@ const FormBuilderScreen = (props) => {
 
   return (
     <div className='form-builder-screen'>
-      <h2 className='form-builder-header'>Build a Form</h2>
+      { editingName ? 
+        <>
+          <input 
+            value={formTitle} 
+            onChange={(e) => setFormTitle(e.target.value)}
+            className='form-title-input'
+          >
+          </input>
+          <button 
+            onClick={() => setEditingName(false)}
+            className='save-name-button'
+          >
+            Save
+          </button>
+        </>
+        :
+        <>
+          <h2 className='form-builder-header'>{formTitle}</h2>
+          <button
+            onClick={() => setEditingName(true)}
+            className='edit-name-button'
+          >
+            Edit
+          </button>
+        </>
+      }
       <select 
         className='new-question-type-selector'
         onChange={(e) => setQType(e.target.value)}
@@ -93,13 +120,14 @@ const FormBuilderScreen = (props) => {
             type='text'
             value={optionText}
             onChange={(e) => setOptionText(e.target.value)}
+            placeholder='Enter a new option.'
           >
           </input>
           <button 
             onClick={() => addNewOption()}
             className='add-option-button'
           >
-            Add New Option
+            Add
           </button> 
         </div>
       : null}

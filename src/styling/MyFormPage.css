@@ -1,7 +1,9 @@
 .full-form {
-  width: 70pc;
+  width: 65pc;
   height: 35pc;
   border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px blue;
   position: fixed;
   left: 15vw;
   top: 10vh;

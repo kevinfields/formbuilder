@@ -1,7 +1,7 @@
 .form-builder-screen {
   position: fixed;
   left: 30vw;
-  width: 40vw;
+  width: 32pc;
   top: 30vh;
   min-height: 45vh;
   border: 1px solid black;
@@ -64,16 +64,31 @@
 .add-options-bar {
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  max-height: 20vh;
-  height: 20vh;
+  gap: 1pc;
+  height: 5pc;
   overflow-y: scroll;
-  justify-content: center;
+  padding: 1pc;
+  border: 1px solid black;
+  width: 26pc;
+  position: relative;
+  left: 2pc;
 }
 
 .single-option {
-  width: 15vw;
-  height: 4.5vh;
+  width: 20pc;
   border: 1px solid black;
+  align-self: center;
+}
+
+.add-option-button {
+  width: 10pc;
+  align-self: center;
+  color: blue;
+  background-color: transparent;
+  border: 1px solid blue;
+}
+
+.new-option-input {
+  width: 15pc;
   align-self: center;
 }
