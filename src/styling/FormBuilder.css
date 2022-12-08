@@ -92,3 +92,21 @@
   width: 15pc;
   align-self: center;
 }
+
+.edit-name-button {
+  width: 5.5pc;
+  align-self: center;
+}
+
+.save-name-button {
+  width: 5.5pc;
+  align-self: center;
+}
+
+.form-title-input {
+  width: 15pc;
+  align-self: center;
+  height: 3pc;
+  margin-top: 0.5pc;
+  font-size: 15pt;
+}

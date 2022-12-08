@@ -72,7 +72,7 @@ const FormBuilderScreen = (props) => {
             onClick={() => setEditingName(false)}
             className='save-name-button'
           >
-            Save
+            Save Name
           </button>
         </>
         :
@@ -82,7 +82,7 @@ const FormBuilderScreen = (props) => {
             onClick={() => setEditingName(true)}
             className='edit-name-button'
           >
-            Edit
+            Edit Name
           </button>
         </>
       }
