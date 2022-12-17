@@ -6,7 +6,7 @@ const FormBuilderScreen = (props) => {
   const [qType, setQType] = useState('text');
   const [qText, setQText] = useState('');
   const [editingName, setEditingName] = useState(false);
-  const [formTitle, setFormTitle] = useState('My Form')
+  const [formTitle, setFormTitle] = useState(props.title)
   const [addOptions, setAddOptions] = useState(false);
   const [optionText, setOptionText] = useState('');
   const [options, setOptions] = useState({
@@ -62,7 +62,7 @@ const FormBuilderScreen = (props) => {
 
     setEditingName(false);
     props.saveName(formTitle);
-    
+
   }
 
   return (

@@ -70,6 +70,7 @@ function App() {
           <FormBuilderScreen 
             submitQuestion={(type, text, options) => addQuestion(type, text, options)}
             saveName={(newName) => setFormTitle(newName)}
+            title={formTitle}
           />
           <div className='questions-list'>
             {questions.map(q => (
