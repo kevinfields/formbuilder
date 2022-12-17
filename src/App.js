@@ -8,6 +8,7 @@ function App() {
 
   const [questions, setQuestions] = useState([]);
   const [creating, setCreating] = useState(true);
+  const [formTitle, setFormTitle] = useState('My Form');
 
   const submitQuestionError = () => {
     alert('That question has already been added.');
@@ -68,6 +69,7 @@ function App() {
           <h2 className="form-header">Build a Form Here</h2>
           <FormBuilderScreen 
             submitQuestion={(type, text, options) => addQuestion(type, text, options)}
+            saveName={(newName) => setFormTitle(newName)}
           />
           <div className='questions-list'>
             {questions.map(q => (
@@ -81,7 +83,7 @@ function App() {
           </div>
         </>
       :
-        <MyFormPage form={questions} />
+        <MyFormPage form={questions} formTitle={formTitle} />
       }
       <button 
         onClick={() => setCreating(!creating)}

@@ -58,6 +58,13 @@ const FormBuilderScreen = (props) => {
 
   }, [qType]);
 
+  const saveName = () => {
+
+    setEditingName(false);
+    props.saveName(formTitle);
+    
+  }
+
   return (
     <div className='form-builder-screen'>
       { editingName ? 
@@ -69,7 +76,7 @@ const FormBuilderScreen = (props) => {
           >
           </input>
           <button 
-            onClick={() => setEditingName(false)}
+            onClick={() => saveName()}
             className='save-name-button'
           >
             Save Name
