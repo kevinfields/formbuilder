@@ -61,7 +61,7 @@ const FormBuilderScreen = (props) => {
   return (
     <div className='form-builder-screen'>
       { editingName ? 
-        <>
+        <div className='name-flex'>
           <input 
             value={formTitle} 
             onChange={(e) => setFormTitle(e.target.value)}
@@ -74,9 +74,9 @@ const FormBuilderScreen = (props) => {
           >
             Save Name
           </button>
-        </>
+        </div>
         :
-        <>
+        <div className='name-flex'>
           <h2 className='form-builder-header'>{formTitle}</h2>
           <button
             onClick={() => setEditingName(true)}
@@ -84,7 +84,7 @@ const FormBuilderScreen = (props) => {
           >
             Edit Name
           </button>
-        </>
+        </div>
       }
       <select 
         className='new-question-type-selector'

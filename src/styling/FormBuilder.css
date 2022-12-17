@@ -105,8 +105,23 @@
 
 .form-title-input {
   width: 15pc;
+  max-width: 15pc;
+  overflow-x: scroll;
   align-self: center;
   height: 3pc;
   margin-top: 0.5pc;
   font-size: 15pt;
+}
+
+.form-builder-header {
+  max-width: 15pc;
+  max-height: 10pc;
+  overflow-x: hidden;
+}
+
+
+.name-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
