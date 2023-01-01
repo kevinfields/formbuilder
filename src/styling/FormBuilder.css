@@ -125,3 +125,36 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.edit-name-button {
+  width: 6pc;
+  border: 1px solid blue;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.save-name-button {
+  width: 6pc;
+  border: 1px solid blue;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.save-name-button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+.edit-name-button:hover {
+  cursor: pointer;
+  background-color: pink;
+}
+
+.save-name-button:active {
+  background-color: lightblue;
+}
+
+.edit-name-button:active {
+  background-color: pink;
+}
+
