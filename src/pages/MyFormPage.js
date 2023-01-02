@@ -5,8 +5,8 @@ import '../styling/MyFormPage.css';
 const MyFormPage = (props) => {
   return (
     <div className='full-form'>
-      <div className='form-header-literal'>{props.formTitle}</div>
-      <FullForm form={props.form} />
+      <div className='form-header-literal'>{props.form.title}</div>
+      <FullForm form={props.form.questions} />
     </div>
   )
 }

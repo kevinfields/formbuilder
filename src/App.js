@@ -84,7 +84,13 @@ function App() {
           </div>
         </>
       :
-        <MyFormPage form={questions} formTitle={formTitle} />
+        <MyFormPage 
+          form={{
+            questions: questions,
+            title: formTitle
+          }} 
+          formTitle={formTitle} 
+        />
       }
       <button 
         onClick={() => setCreating(!creating)}
