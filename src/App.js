@@ -49,21 +49,19 @@ function App() {
   const editQuestion = (q) => {
 
     let catcher = [...questions];
-    catcher = catcher.filter(item => item.text !== q.text || item.type !== q.type);
+    let index = questions.findIndex(item => (item.text === q.text && item.type === q.type));
 
-    switch (q.type) {
-      case 'text':
-        let newText = prompt('Enter New Question: ');
-        catcher.push({
-          text: newText,
-          type: 'text',
-        });
-        setQuestions(catcher);
-        break;
-      default:
-        break;
-    }
-  }
+    console.log('index: ' + index);
+
+    let newText = prompt('Enter New Question: ');
+    let newQuestion = {
+      text: newText !== '' ? newText : q.text,
+      type: q.type,
+    };
+
+    catcher[index] = newQuestion;
+    setQuestions(catcher);
+  };
 
   useEffect(() => {
     if (questions.length === 0) {
