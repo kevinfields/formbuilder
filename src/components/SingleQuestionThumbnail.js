@@ -13,6 +13,12 @@ const SingleQuestionThumbnail = (props) => {
         >
           Remove
         </button>
+        <button
+          className="edit-question-button"
+          onClick={() => props.editQuestion()}
+        >
+          Edit
+        </button>
         <div className='s-q-type'>{props.question.type !== 'none' ? props.question.type : ''}</div>
       </div>
       <div className='s-q-text'>{props.question.text}</div>

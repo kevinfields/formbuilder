@@ -46,6 +46,25 @@ function App() {
     setQuestions(catcher);
   };
 
+  const editQuestion = (q) => {
+
+    let catcher = [...questions];
+    catcher = catcher.filter(item => item.text !== q.text || item.type !== q.type);
+
+    switch (q.type) {
+      case 'text':
+        let newText = prompt('Enter New Question: ');
+        catcher.push({
+          text: newText,
+          type: 'text',
+        });
+        setQuestions(catcher);
+        break;
+      default:
+        break;
+    }
+  }
+
   useEffect(() => {
     if (questions.length === 0) {
       let placeholderQuestion = {
@@ -78,6 +97,7 @@ function App() {
                 <SingleQuestionThumbnail 
                   question={q}
                   removeQuestion={() => removeQuestion(q)}
+                  editQuestion={() => editQuestion(q)}
                 />
               </div>
             ))}
