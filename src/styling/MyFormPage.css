@@ -4,9 +4,6 @@
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px blue;
-  position: fixed;
-  left: 15vw;
-  top: 10vh;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;

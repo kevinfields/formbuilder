@@ -1,8 +1,5 @@
 .form-builder-screen {
-  position: fixed;
-  left: 30vw;
   width: 32pc;
-  top: 30vh;
   min-height: 45vh;
   border: 1px solid black;
   border-radius: 5px;
@@ -70,8 +67,6 @@
   padding: 1pc;
   border: 1px solid black;
   width: 26pc;
-  position: relative;
-  left: 2pc;
 }
 
 .single-option {

@@ -51,8 +51,6 @@ function App() {
     let catcher = [...questions];
     let index = questions.findIndex(item => (item.text === q.text && item.type === q.type));
 
-    console.log('index: ' + index);
-
     let newText = prompt('Enter New Question: ');
     let newQuestion = {
       text: newText !== '' ? newText : q.text,
@@ -83,23 +81,35 @@ function App() {
     <div className="App">
       { creating ?
         <>
-          <h2 className="form-header">Build a Form Here</h2>
-          <FormBuilderScreen 
-            submitQuestion={(type, text, options) => addQuestion(type, text, options)}
-            saveName={(newName) => setFormTitle(newName)}
-            title={formTitle}
-          />
-          <div className='questions-list'>
-            {questions.map(q => (
-              <div className='single-question'>
-                <SingleQuestionThumbnail 
-                  question={q}
-                  removeQuestion={() => removeQuestion(q)}
-                  editQuestion={() => editQuestion(q)}
-                />
-              </div>
-            ))}
-          </div>
+          <table className="table tableStack formTable">
+            <thead className="formTableHeader">
+              <h2>Build a Form Here</h2>
+            </thead>
+            <tbody>
+              <tr className="tableRow">
+                <td className="tableData formScreen">
+                  <FormBuilderScreen 
+                    submitQuestion={(type, text, options) => addQuestion(type, text, options)}
+                    saveName={(newName) => setFormTitle(newName)}
+                    title={formTitle}
+                  />
+                </td>
+                <td className="tableData questionsList">
+                  <div className='questions-list'>
+                    {questions.map(q => (
+                      <div className='single-question'>
+                        <SingleQuestionThumbnail 
+                          question={q}
+                          removeQuestion={() => removeQuestion(q)}
+                          editQuestion={() => editQuestion(q)}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </>
       :
         <MyFormPage 

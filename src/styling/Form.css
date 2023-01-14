@@ -9,10 +9,10 @@
   flex-direction: column;
   gap: 4.5vh;
   position: fixed;
-  right: 3pc;
-  top: 10vh;
-  width: 20pc;
-  height: 70vh;
+  right: 3vw;
+  bottom: 2vh;
+  width: 80vw;
+  height: 10vh;
   border: 1px solid black;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -45,5 +45,35 @@
   box-shadow: 1px 1px 1px 1px darkgreen;
 }
 
+.formTable {
+  border: 1px solid blue;
+  width: 50vw;
+  height: 50vh;
+  position: fixed;
+  left: 25vw;
+  top: 25vh;
+}
 
+@media (max-width:767px) {
+  .tableStack td, .tableStack th {
+      display:block;
+      width:100% !important;
+      margin-bottom:10px;
+      text-align:center !important;
 
+  }
+  .tableStack.table-striped td, .tableStack.table-striped th {
+      margin-bottom:0px;
+  }
+
+  .formTable {
+    width: 80vw !important;
+    left: 10vw !important;
+    top: 10vh !important;
+    height: 80vh !important;
+  }
+}
+
+.formTableHeader {
+  text-align: center;
+}
