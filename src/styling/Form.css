@@ -12,10 +12,10 @@
   right: 3vw;
   bottom: 2vh;
   width: 80vw;
-  height: 10vh;
+  height: 20vh;
   border: 1px solid black;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 
 
@@ -71,7 +71,13 @@
     position: fixed;
     left: 10vw !important;
     top: 10vh !important;
-    height: 80vh !important;
+    height: 65vh !important;
+  }
+
+  .questions-list {
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 

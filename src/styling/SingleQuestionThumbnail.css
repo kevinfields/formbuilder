@@ -3,8 +3,7 @@
 }
 
 .remove-question-button {
-  width: 5pc;
-  height: 3pc;
+ 
   background-color: transparent;
   border-radius: 5px;
   box-shadow: 1px 3px 3px 1px darkred;
@@ -22,8 +21,7 @@
 }
 
 .s-q-thumbnail {
-  width: 18pc;
-  height: 20vh;
+  width: fit-content;
   padding: 2vh;
   border: 1px solid red;
   text-align: center;
@@ -56,6 +54,5 @@
 
 
 .single-question {
-  height: 20vh;
-  width: 19vw;
+  width: 20vw;
 }
