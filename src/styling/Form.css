@@ -25,15 +25,15 @@
 }
 
 .change-mode-button {
-  position: fixed;
-  left: 2.5pc;
-  top: 2pc;
-  width: 7pc;
-  height: 2pc;
+  width: 8vw;
+  height: 8vh;
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid green;
   box-shadow: 1px 2px 2px 1px darkgreen;
+  position: relative;
+  left: 46vw;
+  margin-top: 10vh;
 }
 
 .change-mode-button:hover {
@@ -55,6 +55,7 @@
 }
 
 @media (max-width:767px) {
+
   .tableStack td, .tableStack th {
       display:block;
       width:100% !important;
@@ -79,6 +80,14 @@
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+  .change-mode-button {
+    width: 30vw !important;
+    height: 8vh;
+    left: 35vw !important;
+    margin-top: 1vh;
+  }
+
 }
 
 .formTableHeader {
