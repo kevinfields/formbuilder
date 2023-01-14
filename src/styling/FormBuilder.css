@@ -1,6 +1,6 @@
 .form-builder-screen {
-  width: 32pc;
-  min-height: 45vh;
+
+
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 1px 1px 1px 1px darkgray;
@@ -18,19 +18,17 @@
 }
 
 .new-question-type-selector {
-  height: 5vh;
-  width: 30vw;
+
   border: 2px solid darkblue;
   text-align: center;
 }
 
 .new-question-text {
-  width: 30vw;
+
   border: 2px solid blue;
   border-radius: 5px;
   line-height: 3vh;
-  height: 9vh;
-  min-height: 9vh;
+
 }
 
 .new-question-type-selector {
@@ -42,9 +40,9 @@
 }
 
 .submit-question-button {
-  width: 25%;
+
   align-self: center;
-  height: 5vh;
+
   color: blue;
   border: 1px solid darkblue;
   box-shadow: 1px 1px 1px 1px indigo;
@@ -62,21 +60,21 @@
   display: flex;
   flex-direction: column;
   gap: 1pc;
-  height: 5pc;
+
   overflow-y: scroll;
   padding: 1pc;
   border: 1px solid black;
-  width: 26pc;
+
 }
 
 .single-option {
-  width: 20pc;
+
   border: 1px solid black;
   align-self: center;
 }
 
 .add-option-button {
-  width: 10pc;
+ 
   align-self: center;
   color: blue;
   background-color: transparent;
@@ -84,33 +82,33 @@
 }
 
 .new-option-input {
-  width: 15pc;
+
   align-self: center;
 }
 
 .edit-name-button {
-  width: 5.5pc;
+ 
   align-self: center;
 }
 
 .save-name-button {
-  width: 5.5pc;
+  
   align-self: center;
 }
 
 .form-title-input {
-  width: 15pc;
-  max-width: 15pc;
+
+  
   overflow-x: scroll;
   align-self: center;
-  height: 3pc;
+ 
   margin-top: 0.5pc;
   font-size: 15pt;
 }
 
 .form-builder-header {
-  max-width: 15pc;
-  max-height: 10pc;
+  
+ 
   overflow-x: hidden;
 }
 
@@ -122,14 +120,14 @@
 }
 
 .edit-name-button {
-  width: 6pc;
+  
   border: 1px solid blue;
   background-color: transparent;
   border-radius: 5px;
 }
 
 .save-name-button {
-  width: 6pc;
+ 
   border: 1px solid blue;
   background-color: transparent;
   border-radius: 5px;

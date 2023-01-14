@@ -6,7 +6,7 @@
 
 .questions-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 4.5vh;
   position: fixed;
   right: 3vw;
@@ -21,7 +21,7 @@
 
 .single-question {
   height: 20vh;
-  width: 19vw;
+  width: 10vw;
 }
 
 .change-mode-button {
@@ -60,14 +60,15 @@
       width:100% !important;
       margin-bottom:10px;
       text-align:center !important;
-
   }
+
   .tableStack.table-striped td, .tableStack.table-striped th {
       margin-bottom:0px;
   }
 
   .formTable {
     width: 80vw !important;
+    position: fixed;
     left: 10vw !important;
     top: 10vh !important;
     height: 80vh !important;

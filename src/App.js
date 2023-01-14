@@ -81,7 +81,7 @@ function App() {
     <div className="App">
       { creating ?
         <>
-          <table className="table tableStack formTable">
+          <table className="formTable">
             <thead className="formTableHeader">
               <h2>Build a Form Here</h2>
             </thead>
